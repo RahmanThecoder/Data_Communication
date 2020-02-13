@@ -1,0 +1,24 @@
+clc;
+clear all;
+close all;
+t=0: .2:10;
+x1=(4/pi)*sin(t);
+subplot(2,2,1);
+plot(t,x1);
+title('4/pi sint');
+x2=(4/pi)*1/3*sin(3*t);
+xa=x1+x2;
+subplot(2,2,2);
+plot(t,xa);
+title('(4/pi)sint+(4/3pi)sin3t');
+x3=(4/pi)*1/5*sin(5*t);
+xb=x1+x2+x3;
+subplot(2,2,3);
+plot(t,xb);
+title('(4/pi)sint+(4/3pi)sin3t+(4/5pi)sin5t');
+x4=4/pi*1/7*sin(7*t);
+xc=x1+x2+x3+x4;
+subplot(2,2,4);
+plot(t,xc);
+title('(4/pi)sint+(4/3pi)sin3t+(4/5pi)sin5t+(4/7pi)sin7t');
+
